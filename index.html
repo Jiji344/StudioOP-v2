@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAMLA - Brand Designer & Stratégie Marketing</title>
+    <meta name="description" content="KAMLA - Brand Designer basée à Montpellier, disponible partout dans le monde. Stratégie marketing et design de marque.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <!-- Section Héros -->
+    <section id="accueil" class="hero-section">
+        <!-- Navigation intégrée -->
+        <div class="hero-navigation">
+            <div class="nav-time">
+                <div class="time-dot"></div>
+                <span id="current-time">LOCAL/18:04:49</span>
+            </div>
+            
+            <div class="background">
+                <button class="menu__icon" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="nav-accueil">
+                <a href="#accueil" class="accueil-btn">ACCUEIL</a>
+            </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <div class="nav-menu" id="nav-menu">
+            <a href="#accueil" class="nav-link">ACCUEIL</a>
+            <a href="#approche" class="nav-link">APPROCHE</a>
+            <a href="#services" class="nav-link">SERVICES</a>
+            <a href="#portfolio" class="nav-link">PORTFOLIO</a>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-number">01</div>
+            <div class="hero-title-section">
+                <h1 class="hero-title">JE SUIS KAMLA, BASÉE À MONTPELLIER, FRANCE.</h1>
+                <p class="hero-description">J'ai mis en œuvre mes compétences digitales pour assurer une expérience cohérente et engageante sur tous les supports et plateformes.</p>
+            </div>
+            <div class="progress-indicator">
+                <div class="progress-line">
+                    <div class="progress-dot" data-step="1">01</div>
+                    <div class="progress-dot" data-step="2">02</div>
+                    <div class="progress-dot" data-step="3">03</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Conteneur 3D pour StudioOP -->
+        <div id="studioop-3d-container" class="studioop-3d-container"></div>
+    </section>
+
+    <!-- Section Approche -->
+    <section id="approche" class="approach-section">
+        <div class="approach-header">
+            <div class="approach-number">02</div>
+            <div class="approach-title">//APPROCHE</div>
+            <div class="approach-subtitle">TROIS PHASES</div>
+        </div>
+        
+        <div class="phases-grid">
+            <div class="phase-card">
+                <div class="phase-icons">
+                    <div class="phase-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="phase-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="phase-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+                <h3 class="phase-title">DÉCOUVERTE & STRATÉGIE</h3>
+                <p class="phase-description">Identifier les opportunités et affiner les stratégies pour des décisions éclairées et efficaces.</p>
+            </div>
+            
+            <div class="phase-card">
+                <div class="phase-icons">
+                    <div class="phase-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="phase-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="phase-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+                <h3 class="phase-title">CONCEPTION & MISE EN ŒUVRE</h3>
+                <p class="phase-description">Concevoir et déployer des solutions créatives pour transformer les idées en contenus et expériences engageantes.</p>
+            </div>
+            
+            <div class="phase-card">
+                <div class="phase-icons">
+                    <div class="phase-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="phase-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="phase-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                </div>
+                <h3 class="phase-title">LIVRAISON & SUIVI</h3>
+                <p class="phase-description">Assurer l'exécution efficace des projets et mesurer la performance pour optimiser l'impact des actions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="apropos" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À PROPOS</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Passionnée par l'identité de marque</h3>
+                    <p>Je suis KAMLA, Brand Designer spécialisée dans la création d'identités visuelles fortes et cohérentes. Basée à Montpellier mais disponible partout dans le monde, j'accompagne les entreprises dans le développement de leur image de marque.</p>
+                    <p>Mon approche combine créativité et stratégie marketing pour créer des designs qui non seulement plaisent, mais qui convertissent et marquent les esprits.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projets réalisés</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Années d'expérience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Satisfaction client</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">SERVICES</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Identité Visuelle</h3>
+                    <p>Création de logos, chartes graphiques et éléments d'identité visuelle cohérents et mémorables.</p>
+                    <ul>
+                        <li>Logo design</li>
+                        <li>Charte graphique</li>
+                        <li>Papeterie</li>
+                        <li>Brand guidelines</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Stratégie Marketing</h3>
+                    <p>Développement de stratégies marketing adaptées à votre cible et à vos objectifs business.</p>
+                    <ul>
+                        <li>Positionnement de marque</li>
+                        <li>Stratégie digitale</li>
+                        <li>Analyse concurrentielle</li>
+                        <li>Plan de communication</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Design Digital</h3>
+                    <p>Création d'interfaces utilisateur et d'expériences digitales optimisées pour la conversion.</p>
+                    <ul>
+                        <li>UI/UX Design</li>
+                        <li>Web design</li>
+                        <li>Applications mobiles</li>
+                        <li>E-commerce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Portfolio -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PORTFOLIO</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">TOUS</button>
+                <button class="filter-btn" data-filter="branding">BRANDING</button>
+                <button class="filter-btn" data-filter="digital">DIGITAL</button>
+                <button class="filter-btn" data-filter="print">PRINT</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Projet Branding 1</h4>
+                            <p>Identité visuelle complète</p>
+                            <button class="view-project">Voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Application Mobile</h4>
+                            <p>UI/UX Design</p>
+                            <button class="view-project">Voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>E-commerce</h4>
+                            <p>Design de boutique en ligne</p>
+                            <button class="view-project">Voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="print">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Campagne Print</h4>
+                            <p>Design print et affichage</p>
+                            <button class="view-project">Voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Site Web</h4>
+                            <p>Design et développement</p>
+                            <button class="view-project">Voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <h4>Restaurant</h4>
+                            <p>Identité complète</p>
+                            <button class="view-project">Voir le projet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>KAMLA</span>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2024 KAMLA. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="studioop-3d.js"></script>
+</body>
+</html>

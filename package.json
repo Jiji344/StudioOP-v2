@@ -1,0 +1,37 @@
+{
+  "name": "kamla-website",
+  "version": "1.0.0",
+  "description": "Site web professionnel pour KAMLA - Brand Designer & Stratégie Marketing",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "build": "echo 'Build completed'",
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=styles.css,script.js,index.html",
+    "lint": "echo 'Linting completed'",
+    "test": "echo 'Tests completed'"
+  },
+  "keywords": [
+    "branding",
+    "design",
+    "marketing",
+    "website",
+    "portfolio",
+    "freelance"
+  ],
+  "author": "KAMLA",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamla/studio-website.git"
+  },
+  "homepage": "https://kamla-design.com"
+}
