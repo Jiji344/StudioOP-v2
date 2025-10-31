@@ -1,0 +1,73 @@
+{
+  "hash": "9c0a8d3c",
+  "configHash": "73cc6510",
+  "lockfileHash": "f55283ae",
+  "browserHash": "d1524cc7",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "3724fb88",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "18305c33",
+      "needsInterop": true
+    },
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "c19a62a5",
+      "needsInterop": false
+    },
+    "@react-three/drei": {
+      "src": "../../node_modules/@react-three/drei/index.js",
+      "file": "@react-three_drei.js",
+      "fileHash": "891459d6",
+      "needsInterop": false
+    },
+    "three": {
+      "src": "../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "bd469a8b",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "8119ca0b",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-4SWPGK3V": {
+      "file": "chunk-4SWPGK3V.js"
+    },
+    "chunk-7WZHPLB3": {
+      "file": "chunk-7WZHPLB3.js"
+    },
+    "chunk-TNB6WWFL": {
+      "file": "chunk-TNB6WWFL.js"
+    },
+    "chunk-7KC2DZ2O": {
+      "file": "chunk-7KC2DZ2O.js"
+    },
+    "chunk-UO5OALUK": {
+      "file": "chunk-UO5OALUK.js"
+    },
+    "hls-UQ2ZZGDL": {
+      "file": "hls-UQ2ZZGDL.js"
+    },
+    "chunk-QPUO7WWP": {
+      "file": "chunk-QPUO7WWP.js"
+    },
+    "vision_bundle-EJYKSMNM": {
+      "file": "vision_bundle-EJYKSMNM.js"
+    },
+    "chunk-DC5AMYBS": {
+      "file": "chunk-DC5AMYBS.js"
+    }
+  }
+}
