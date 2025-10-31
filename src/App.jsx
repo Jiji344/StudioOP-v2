@@ -4,7 +4,7 @@ import Section from './components/Section'
 
 function App() {
   const sections = [
-    { id: 'section2', title: 'Section 2', content: 'Contenu de la deuxième section' },
+    { id: 'section2', title: 'À propos', content: 'Contenu de la section À propos' },
     { id: 'section3', title: 'Section 3', content: 'Contenu de la troisième section' },
     { id: 'section4', title: 'Section 4', content: 'Contenu de la quatrième section' },
     { id: 'section5', title: 'Section 5', content: 'Contenu de la cinquième section' },

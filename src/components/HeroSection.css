@@ -2,11 +2,13 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-3d-container {
   position: absolute;
-  top: 55%;
+  top: 44%;
   left: 50%;
   transform: translate(-50%, calc(-50% + 20px));
   z-index: 15;
@@ -32,6 +34,7 @@
   flex-direction: column;
   min-height: 100vh;
   padding: 20px;
+  padding-top: 0;
 }
 
 /* Le texte passe derrière l'objet 3D */
@@ -39,6 +42,21 @@
   position: relative;
   margin-bottom: 0;
   z-index: 5;
+  align-self: center;
+  margin-top: 50px;
+  transform: translateY(-100px);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    transform: translateY(-290px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    transform: translateY(-190px);
+  }
 }
 
 /* Responsive Hero Section */
@@ -46,7 +64,7 @@
   .hero-3d-container {
     max-width: 650px;
     max-height: 500px;
-    top: 52%;
+    top: 41%;
   }
 }
 
@@ -54,7 +72,7 @@
   .hero-3d-container {
     max-width: 90%;
     max-height: 450px;
-    top: 48%;
+    top: 37%;
     transform: translate(-50%, calc(-50% + 10px));
   }
 
@@ -67,7 +85,7 @@
   .hero-3d-container {
     max-width: 95%;
     max-height: 400px;
-    top: 45%;
+    top: 34%;
     transform: translate(-50%, calc(-50% + 5px));
   }
 

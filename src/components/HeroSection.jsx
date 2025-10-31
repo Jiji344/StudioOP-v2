@@ -1,6 +1,8 @@
 import React, { Suspense, useState, useEffect, lazy } from 'react'
 import GridOverlay from './GridOverlay'
 import BurgerMenu from './BurgerMenu'
+import Clock from './Clock'
+import InfoBanner from './InfoBanner'
 import './HeroSection.css'
 
 // Lazy load du composant 3D pour réduire le bundle initial
@@ -30,6 +32,7 @@ const HeroSection = () => {
 
   return (
     <section className="section hero-section" id="section1">
+      <Clock />
       <BurgerMenu />
       <GridOverlay />
       
@@ -47,6 +50,8 @@ const HeroSection = () => {
           STUDIO
         </h1>
       </div>
+      
+      <InfoBanner />
     </section>
   )
 }

@@ -50,7 +50,8 @@ const BurgerMenu = () => {
       <div className={`menu-card ${isOpen ? 'menu-card-open' : ''}`}>
         <div className="menu-card-shadow"></div>
         <div className="menu-card-content">
-          <button className="menu-close" onClick={handleClose}>×</button>
+          {/* Petit bouton de fermeture avec croix */}
+          <button className="menu-close-small" onClick={handleClose}>×</button>
           <nav className="menu-nav">
             <a href="#section1" onClick={handleClose}>Accueil</a>
             <a href="#section2" onClick={handleClose}>Section 2</a>

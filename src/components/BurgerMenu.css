@@ -222,28 +222,41 @@ button:active {
   z-index: 3;
 }
 
-/* Menu Close Button */
-.menu-close {
+/* Petit bouton de fermeture avec croix */
+.menu-close-small {
   all: unset;
   position: absolute;
   top: 1em;
   right: 1em;
-  width: 2.5em;
-  height: 2.5em;
+  width: 1.5em;
+  height: 1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.5em;
-  color: white;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  transition: all 0.2s ease;
   z-index: 10;
+  color: white;
+  font-size: 1.5em;
+  line-height: 1;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.menu-close:hover {
-  background: rgba(255, 255, 255, 0.2);
+.menu-close-small:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.menu-close-small:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.menu-close-small:active {
   transform: scale(1.1);
 }
 
@@ -312,12 +325,9 @@ button:active {
     padding: 2.5em 1.5em;
   }
 
-  .menu-close {
-    top: 0.8em;
-    right: 0.8em;
-    width: 2em;
-    height: 2em;
-    font-size: 1.3em;
+  .menu-close-small {
+    top: 0.4em;
+    right: 0.6em;
   }
 
   .menu-nav {
@@ -348,12 +358,9 @@ button:active {
     padding: 2em 1.2em;
   }
 
-  .menu-close {
-    top: 0.6em;
-    right: 0.6em;
-    width: 1.8em;
-    height: 1.8em;
-    font-size: 1.2em;
+  .menu-close-small {
+    top: 0.3em;
+    right: 0.5em;
   }
 
   .menu-nav {

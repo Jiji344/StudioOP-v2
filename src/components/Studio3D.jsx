@@ -243,6 +243,58 @@ function RedLights() {
   )
 }
 
+function BottomLights() {
+  const lightsGroupRef = useRef()
+
+  useFrame((state) => {
+    if (lightsGroupRef.current) {
+      const time = state.clock.elapsedTime
+      
+      lightsGroupRef.current.children.forEach((light, index) => {
+        // Légère animation verticale pour créer un effet de scintillement
+        const verticalOffset = Math.sin(time * 0.5 + index * 0.5) * 0.3
+        light.position.y = -4 + verticalOffset // Position en bas de l'objet
+      })
+    }
+  })
+
+  return (
+    <group ref={lightsGroupRef}>
+      {/* 3 lumières orange en bas */}
+      {Array.from({ length: 3 }).map((_, index) => (
+        <pointLight
+          key={`orange-bottom-${index}`}
+          color="#ff6600"
+          intensity={4}
+          distance={12}
+          decay={2}
+          position={[
+            (index - 1) * 2, // Espacement horizontal
+            -4, // Position en bas
+            0
+          ]}
+        />
+      ))}
+      
+      {/* 3 lumières rouges en bas */}
+      {Array.from({ length: 3 }).map((_, index) => (
+        <pointLight
+          key={`red-bottom-${index}`}
+          color="#ff0000"
+          intensity={4}
+          distance={12}
+          decay={2}
+          position={[
+            (index - 1) * 2 + 1, // Légèrement décalées des orange
+            -4.5, // Un peu plus bas que les orange
+            1
+          ]}
+        />
+      ))}
+    </group>
+  )
+}
+
 function Studio3D() {
   return (
     <Suspense fallback={null}>
@@ -254,6 +306,9 @@ function Studio3D() {
       
       {/* Lumières rouges supplémentaires */}
       <RedLights />
+      
+      {/* Lumières orange et rouges qui viennent du bas */}
+      <BottomLights />
       
       <Model />
     </Suspense>

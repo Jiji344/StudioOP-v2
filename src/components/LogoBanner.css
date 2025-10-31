@@ -1,0 +1,180 @@
+.logo-banner-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  background: transparent;
+  padding: 20px 0;
+}
+
+.logo-banner-track {
+  display: flex;
+  gap: 40px;
+  width: fit-content;
+  animation: scroll-logos 15s linear infinite;
+}
+
+.logo-item {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-adobe {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Logo Figma */
+.logo-figma {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.figma-shape {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.shape-1 {
+  width: 30px;
+  height: 20px;
+  background: #FF7262;
+  top: 10px;
+  left: 15px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.shape-2 {
+  width: 30px;
+  height: 20px;
+  background: #A259FF;
+  top: 20px;
+  left: 35px;
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(45deg);
+}
+
+.shape-3 {
+  width: 20px;
+  height: 20px;
+  background: #1ABCFE;
+  bottom: 20px;
+  left: 25px;
+  border-radius: 50%;
+}
+
+.shape-4 {
+  width: 20px;
+  height: 20px;
+  background: #0ACF83;
+  bottom: 10px;
+  left: 45px;
+  border-radius: 50%;
+}
+
+/* Logo Canva */
+.logo-canva {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  background: linear-gradient(135deg, #00C4CC 0%, #7B2CBF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes scroll-logos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-item {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-adobe {
+    font-size: 1.5rem;
+  }
+
+  .logo-canva {
+    font-size: 1.2rem;
+  }
+
+  .logo-banner-track {
+    gap: 30px;
+  }
+
+  @keyframes scroll-logos {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-adobe {
+    font-size: 1.2rem;
+  }
+
+  .logo-canva {
+    font-size: 1rem;
+  }
+
+  .logo-banner-track {
+    gap: 25px;
+  }
+
+  .logo-banner-container {
+    padding: 15px 0;
+  }
+
+  @keyframes scroll-logos {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+

@@ -15,6 +15,15 @@
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 /* Body très sombre */
@@ -42,6 +51,20 @@ body {
   justify-content: center;
   padding: 80px 40px;
   border-bottom: 1px solid #222;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Hero section spécifique - pas de padding en haut */
+.hero-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Surcharger le padding de .section pour la hero section */
+.section.hero-section {
+  padding: 0;
+  align-items: flex-start;
 }
 
 .section-content {
@@ -93,6 +116,11 @@ body {
   width: 100%;
 }
 
+/* Surcharger le margin dans HeroSection.css pour permettre les marges négatives */
+.section.hero-section .hero-title {
+  margin-top: 50px;
+}
+
 /* Grilles - Parfaitement centrées et empilées */
 .grid-overlay {
   position: absolute;
@@ -102,15 +130,16 @@ body {
   bottom: 0;
   pointer-events: none;
   z-index: 1;
+  overflow: hidden;
 }
 
-/* Grille fine avec petits carrés - Plus visible */
-.fine-grid {
+/* Texture en mini losanges */
+.diamond-texture {
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-position: center center;
+    repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(0, 0, 0, 0.3) 3px, rgba(0, 0, 0, 0.3) 6px),
+    repeating-linear-gradient(-45deg, transparent, transparent 3px, rgba(20, 20, 20, 0.25) 3px, rgba(20, 20, 20, 0.25) 6px);
+  background-size: 6px 6px;
+  background-position: 0 0, 3px 3px;
   z-index: 1;
 }
 
@@ -150,15 +179,16 @@ body {
 
   .hero-title {
     font-size: clamp(4rem, 18vw, 7rem);
-    margin: -80px auto 0 auto;
+    margin: 50px auto 0 auto;
     letter-spacing: 0.03em;
   }
 
-  .fine-grid {
-    background-size: 15px 15px;
+  .diamond-texture {
+    background-size: 5px 5px;
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0, 0, 0, 0.35) 2px, rgba(0, 0, 0, 0.35) 4px),
+      repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(20, 20, 20, 0.3) 2px, rgba(20, 20, 20, 0.3) 4px);
+    background-position: 0 0, 2.5px 2.5px;
   }
 
   .main-grid {
@@ -184,14 +214,15 @@ body {
 
   .hero-title {
     font-size: clamp(3.5rem, 18vw, 6rem);
-    margin: -100px auto 0 auto;
+    margin: 50px auto 0 auto;
   }
 
-  .fine-grid {
-    background-size: 12px 12px;
+  .diamond-texture {
+    background-size: 4px 4px;
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+      repeating-linear-gradient(45deg, transparent, transparent 1px, rgba(0, 0, 0, 0.4) 1px, rgba(0, 0, 0, 0.4) 2px),
+      repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(20, 20, 20, 0.35) 1px, rgba(20, 20, 20, 0.35) 2px);
+    background-position: 0 0, 2px 2px;
   }
 
   .main-grid {

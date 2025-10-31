@@ -1,5 +1,6 @@
 import React from 'react'
 import GridOverlay from './GridOverlay'
+import LogoBanner from './LogoBanner'
 
 const Section = ({ id, title, content, index }) => {
   return (
@@ -9,6 +10,7 @@ const Section = ({ id, title, content, index }) => {
         <h2>{title}</h2>
         <p>{content}</p>
       </div>
+      {id === 'section2' && <LogoBanner />}
     </section>
   )
 }

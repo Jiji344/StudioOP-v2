@@ -1,0 +1,144 @@
+.info-banner {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 240px;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.info-banner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Décaler l'icône du milieu et celle de droite vers la droite sur desktop */
+@media (min-width: 769px) {
+  .info-banner-item:nth-child(2),
+  .info-banner-item:nth-child(3) {
+    transform: translateX(10px);
+  }
+}
+
+.info-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-location {
+  color: #50C878; /* Vert pour localisation */
+}
+
+.icon-globe {
+  color: #FFFFFF; /* Blanc pour globe */
+}
+
+.icon-shield {
+  color: #4A90E2; /* Bleu pour bouclier */
+}
+
+.info-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  text-align: center;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-banner {
+    bottom: 60px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .info-label {
+    font-size: 0.7rem;
+  }
+
+  .info-value {
+    font-size: 0.85rem;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .info-banner {
+    bottom: 130px;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .info-banner-item {
+    padding: 8px 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info-banner-divider {
+    display: none;
+  }
+
+  .info-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .info-label {
+    font-size: 0.65rem;
+  }
+
+  .info-value {
+    font-size: 0.8rem;
+  }
+}
+
