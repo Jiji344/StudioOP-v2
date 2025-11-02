@@ -1,8 +1,11 @@
 import React from 'react'
+import { GridAnimationProvider, useGridAnimation } from './contexts/GridAnimationContext'
 import HeroSection from './components/HeroSection'
 import Section from './components/Section'
+import GridOverlay from './components/GridOverlay'
 
-function App() {
+function AppContent() {
+  const { shouldAnimate } = useGridAnimation()
   const sections = [
     { id: 'section2', title: 'Mes projets', content: 'Contenu de la section Mes projets' },
     { id: 'section3', title: 'Section 3', content: 'Contenu de la troisième section' },
@@ -13,6 +16,9 @@ function App() {
 
   return (
     <div className="app">
+      {/* Grille qui couvre tout le body */}
+      <GridOverlay shouldAnimate={shouldAnimate} />
+      
       <HeroSection />
       {sections.map((section, index) => (
         <Section
@@ -24,6 +30,14 @@ function App() {
         />
       ))}
     </div>
+  )
+}
+
+function App() {
+  return (
+    <GridAnimationProvider>
+      <AppContent />
+    </GridAnimationProvider>
   )
 }
 

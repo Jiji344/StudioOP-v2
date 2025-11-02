@@ -3,12 +3,22 @@ import { useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
 
-function Model() {
+function Model({ onModelLoaded }) {
   const { scene } = useGLTF('/3D/Studio.glb')
   const modelRef = useRef()
   const mousePosition = useRef({ x: 0, y: 0 })
   const [scale, setScale] = useState([2, 2, 2])
   const [position, setPosition] = useState([0, -2.5, 0])
+  
+  // Signaler que le modèle est chargé
+  useEffect(() => {
+    if (scene && onModelLoaded) {
+      // Petite temporisation pour s'assurer que tout est bien chargé
+      setTimeout(() => {
+        onModelLoaded()
+      }, 100)
+    }
+  }, [scene, onModelLoaded])
 
   // Calculer l'échelle responsive
   useEffect(() => {
@@ -295,7 +305,7 @@ function BottomLights() {
   )
 }
 
-function Studio3D() {
+function Studio3D({ onModelLoaded }) {
   return (
     <Suspense fallback={null}>
       {/* Très grosse lumière marron/terre cuite immobile face à l'objet */}
@@ -310,7 +320,7 @@ function Studio3D() {
       {/* Lumières orange et rouges qui viennent du bas */}
       <BottomLights />
       
-      <Model />
+      <Model onModelLoaded={onModelLoaded} />
     </Suspense>
   )
 }
