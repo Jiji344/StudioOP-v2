@@ -63,7 +63,11 @@ const HeroSection = () => {
       
       <div className="section-content hero-content">
         <h1 className="hero-title" data-text="STUDIO">
-          STUDIO
+          {'STUDIO'.split('').map((letter, index) => (
+            <span key={index} className="hero-letter">
+              {letter === ' ' ? '\u00A0' : letter}
+            </span>
+          ))}
         </h1>
       </div>
       

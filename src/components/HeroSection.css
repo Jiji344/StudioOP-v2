@@ -51,34 +51,47 @@
   align-self: center;
   margin-top: 50px;
   transform: translateY(-100px);
-  transition: transform 0.3s ease, color 0.3s ease;
-  cursor: pointer;
   pointer-events: auto !important;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  letter-spacing: 0;
+  font-size: inherit;
 }
 
-.hero-title:hover {
-  transform: translateY(-100px) scale(1.05);
+.hero-letter {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+  transform-origin: center;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.hero-letter:hover {
+  transform: scale(1.15);
   color: #ffffff;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  will-change: transform;
+}
+
+.hero-letter:not(:hover) {
+  will-change: auto;
 }
 
 @media (max-width: 768px) {
   .hero-title {
     transform: translateY(-290px);
   }
-
-  .hero-title:hover {
-    transform: translateY(-290px) scale(1.05);
-  }
 }
 
 @media (max-width: 480px) {
   .hero-title {
     transform: translateY(-190px);
-  }
-
-  .hero-title:hover {
-    transform: translateY(-190px) scale(1.05);
   }
 }
 
@@ -177,34 +190,45 @@
     align-self: center;
     margin-top: 50px;
     transform: translateY(-100px);
-    transition: transform 0.3s ease, color 0.3s ease;
-    cursor: pointer;
     pointer-events: auto !important;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
-  .hero-title:hover {
-    transform: translateY(-100px) scale(1.05);
+  .hero-letter {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+    transform-origin: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .hero-letter:hover {
+    transform: scale(1.15);
     color: #ffffff;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    will-change: transform;
+  }
+
+  .hero-letter:not(:hover) {
+    will-change: auto;
   }
   
   @media (max-width: 768px) {
     .hero-title {
       transform: translateY(-290px);
     }
-
-    .hero-title:hover {
-      transform: translateY(-290px) scale(1.05);
-    }
   }
   
   @media (max-width: 480px) {
     .hero-title {
       transform: translateY(-190px);
-    }
-
-    .hero-title:hover {
-      transform: translateY(-190px) scale(1.05);
     }
   }
   
