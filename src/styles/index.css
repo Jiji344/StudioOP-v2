@@ -60,6 +60,7 @@ body {
 .hero-section {
   padding-top: 0;
   padding-bottom: 0;
+  margin-bottom: 200px !important;
 }
 
 /* Surcharger le padding de .section pour la hero section */
@@ -115,6 +116,10 @@ body {
   z-index: 5;
   text-align: center;
   width: 100%;
+  opacity: 1 !important;
+  background-color: transparent;
+  mix-blend-mode: normal;
+  isolation: isolate;
 }
 
 /* Surcharger le margin dans HeroSection.css pour permettre les marges négatives */

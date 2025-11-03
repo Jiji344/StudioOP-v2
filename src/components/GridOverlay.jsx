@@ -48,7 +48,10 @@ const GridOverlay = ({ shouldAnimate = false }) => {
   const numberOfRectanglesHeight = Math.ceil(documentHeight / gridHeight)
   const viewHeight = gridHeight * numberOfRectanglesHeight  // Hauteur suffisante pour couvrir tout le document
   
-  // Générer les lignes verticales - exactement 6 lignes pour 5 rectangles
+  // Arrêter la grille après la 5ème case de hauteur
+  const gridStopY = 5 * gridHeight  // Fin de la case 5
+  
+  // Générer les lignes verticales - arrêter après la case 5
   const verticalLines = []
   let vIndex = 0
   for (let x = 0; x <= viewWidth; x += gridWidth) {
@@ -59,10 +62,10 @@ const GridOverlay = ({ shouldAnimate = false }) => {
         x1={x}
         y1={0}
         x2={x}
-        y2={viewHeight}
+        y2={gridStopY}
         className={`grid-line-drawing vertical-line ${isAnimating ? 'drawing' : ''}`}
         style={{
-          '--line-length': viewHeight,
+          '--line-length': gridStopY,
           '--animation-delay': `${delay}s`
         }}
       />
@@ -70,10 +73,10 @@ const GridOverlay = ({ shouldAnimate = false }) => {
     vIndex++
   }
   
-  // Générer les lignes horizontales - assez pour couvrir toute la hauteur du document
+  // Générer les lignes horizontales - arrêter après la case 5
   const horizontalLines = []
   let hIndex = 0
-  for (let y = 0; y <= viewHeight; y += gridHeight) {
+  for (let y = 0; y <= gridStopY; y += gridHeight) {
     const delay = 0.2 + hIndex * 0.05  // Délai progressif plus rapide
     horizontalLines.push(
       <line
@@ -103,8 +106,20 @@ const GridOverlay = ({ shouldAnimate = false }) => {
 
   return (
     <>
-      {/* Texture en mini losanges */}
-      <div className="grid-overlay diamond-texture"></div>
+      {/* Texture en mini losanges - arrêter après la case 5 */}
+      <div className="grid-overlay diamond-texture" style={{
+        position: 'relative',
+        maskImage: `linear-gradient(to bottom, 
+          black 0%, 
+          black ${(gridStopY / viewHeight) * 100}%, 
+          transparent ${(gridStopY / viewHeight) * 100}%, 
+          transparent 100%)`,
+        WebkitMaskImage: `linear-gradient(to bottom, 
+          black 0%, 
+          black ${(gridStopY / viewHeight) * 100}%, 
+          transparent ${(gridStopY / viewHeight) * 100}%, 
+          transparent 100%)`
+      }}></div>
       {/* Grille principale avec animation de dessin */}
       <div className="grid-overlay main-grid-animated">
         <svg

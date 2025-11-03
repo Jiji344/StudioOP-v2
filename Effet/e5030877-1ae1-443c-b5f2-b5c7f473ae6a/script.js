@@ -2,12 +2,12 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-const text = param("text") || param("q") || "CODE";
+const text = unescape(window.location.hash.replace(/^#/, "")) || "CODE";
 let particles = [];
 let adjustX = 0;
 let adjustY = 0;
 let padding = 20;
-const widthRatio = window.innerWidth / 1366;
+const widthRatio = window.innerWidth / 200;
 console.log(widthRatio);
 let mouse = {
   x: null,
@@ -22,7 +22,7 @@ window.addEventListener("mousemove", (e) => {
 window.addEventListener("mousedown", () => (mouse.radius = canvas.width / 2));
 window.addEventListener("mouseup", () => (mouse.radius = canvas.width / 10));
 ctx.fillStyle = "white";
-ctx.font = `${param("res") || 30}px ${param("font") || "monospace"}`;
+ctx.font = `${35}px sans-serif`;
 var _text = ctx.measureText(text);
 _text.height = _text.actualBoundingBoxAscent + _text.actualBoundingBoxDescent;
 ctx.fillText(text, 0, _text.height);
@@ -39,7 +39,7 @@ class Particle {
     this.density = Math.random() * 40 + 5;
   }
   draw() {
-    ctx.fillStyle = this.distance < mouse.radius + 30 ? "#8ff" : "white";
+    ctx.fillStyle = this.distance < mouse.radius + 30 ? "#eee" : "white";
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size * widthRatio, 0, Math.PI * 2);
     ctx.closePath();
@@ -105,9 +105,9 @@ function animate() {
 animate();
 
 function connect() {
-  // return;
+  return;
   let opacityValue = 1;
-  let maxDist = parseInt(param("connectionDistance") || 50) * widthRatio;
+  let maxDist = 50 * widthRatio;
   for (let a = 0; a < particles.length; a++) {
     for (let b = a; b < particles.length; b++) {
       let dx = particles[a].x - particles[b].x;
@@ -125,12 +125,4 @@ function connect() {
       }
     }
   }
-}
-function param(name, url = window.location.href) {
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-    results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return "";
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

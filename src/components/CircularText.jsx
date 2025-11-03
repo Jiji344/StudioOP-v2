@@ -45,8 +45,8 @@ const CircularText = () => {
         ref={svgRef}
         className="circular-text-svg"
         viewBox="0 0 200 200"
-        width="120"
-        height="120"
+        width="80"
+        height="80"
       >
         <defs>
           {/* Chemin circulaire */}

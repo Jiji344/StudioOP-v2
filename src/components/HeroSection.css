@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  margin: 0;
+  margin: 0 0 200px 0;
   padding: 0;
 }
 
@@ -41,6 +41,7 @@
   padding: 20px;
   padding-top: 0;
   pointer-events: none;
+  isolation: isolate;
 }
 
 /* Le texte passe derrière l'objet 3D */
@@ -57,30 +58,19 @@
   width: 100%;
   letter-spacing: 0;
   font-size: inherit;
+  opacity: 1 !important;
+  background-color: transparent;
+  mix-blend-mode: normal;
+  isolation: isolate;
 }
 
 .hero-letter {
   display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-  cursor: pointer;
-  transform-origin: center;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-}
-
-.hero-letter:hover {
-  transform: scale(1.15);
-  color: #ffffff;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  will-change: transform;
-}
-
-.hero-letter:not(:hover) {
-  will-change: auto;
+  opacity: 1 !important;
+  background-color: transparent;
+  mix-blend-mode: normal;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -198,26 +188,6 @@
 
   .hero-letter {
     display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-    cursor: pointer;
-    transform-origin: center;
-    vertical-align: middle;
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    box-sizing: border-box;
-  }
-
-  .hero-letter:hover {
-    transform: scale(1.15);
-    color: #ffffff;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    will-change: transform;
-  }
-
-  .hero-letter:not(:hover) {
-    will-change: auto;
   }
   
   @media (max-width: 768px) {
