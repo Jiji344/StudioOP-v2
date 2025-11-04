@@ -1,7 +1,10 @@
 import React from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import './InfoBanner.css'
 
 const InfoBanner = () => {
+  const { t } = useLanguage()
+
   return (
     <div className="info-banner">
       <div className="info-banner-item">
@@ -12,8 +15,8 @@ const InfoBanner = () => {
           </svg>
         </div>
         <div className="info-text">
-          <span className="info-label">BASÉE À MONTPELLIER</span>
-          <span className="info-value">FRANCE</span>
+          <span className="info-label">{t('basedIn')}</span>
+          <span className="info-value">{t('france')}</span>
         </div>
       </div>
 
@@ -58,8 +61,8 @@ const InfoBanner = () => {
           </svg>
         </div>
         <div className="info-text">
-          <span className="info-label">DISPONIBLE PARTOUT DANS</span>
-          <span className="info-value">LE MONDE</span>
+          <span className="info-label">{t('availableWorldwide')}</span>
+          <span className="info-value">{t('theWorld')}</span>
         </div>
       </div>
 
@@ -74,8 +77,8 @@ const InfoBanner = () => {
           </svg>
         </div>
         <div className="info-text">
-          <span className="info-label">BRAND DESIGNER +</span>
-          <span className="info-value">STRATÉGIE MARKETING</span>
+          <span className="info-label">{t('brandDesigner')}</span>
+          <span className="info-value">{t('marketingStrategy')}</span>
         </div>
       </div>
     </div>

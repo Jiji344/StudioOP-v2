@@ -26,7 +26,7 @@
 .portfolio-wrapper {
   position: relative;
   z-index: 10;
-  width: 100%;
+  width: 80%;
 }
 
 .portfolio-title {
@@ -46,9 +46,24 @@
 
 .portfolio-banner-wrapper {
   position: relative;
-  width: 100%;
+  width: 80%;
   z-index: 5;
   margin-top: 60px;
+  /* Masque pour faire disparaître progressivement les icônes sur les bords */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
 
 .portfolio-container::before {

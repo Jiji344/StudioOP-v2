@@ -106,7 +106,7 @@ body {
 
 .hero-title {
   font-family: 'Gunterz', sans-serif;
-  font-size: clamp(6rem, 15vw, 12rem);
+  font-size: clamp(8rem, 18vw, 15rem);
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
@@ -239,7 +239,7 @@ body {
   }
 
   .hero-title {
-    font-size: clamp(4rem, 18vw, 7rem);
+    font-size: clamp(5.5rem, 20vw, 9rem);
     margin: 50px auto 0 auto;
     letter-spacing: 0.03em;
   }
@@ -278,7 +278,7 @@ body {
   }
 
   .hero-title {
-    font-size: clamp(3.5rem, 18vw, 6rem);
+    font-size: clamp(4.5rem, 20vw, 7.5rem);
     margin: 50px auto 0 auto;
   }
 

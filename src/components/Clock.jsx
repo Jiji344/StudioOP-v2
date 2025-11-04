@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import './Clock.css'
 
 const Clock = () => {
   const [time, setTime] = useState(new Date())
+  const { language, toggleLanguage } = useLanguage()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -22,11 +24,22 @@ const Clock = () => {
   return (
     <div className="clock-container">
       <div className="clock-text">{formatTime(time)}</div>
+      <div className="language-switch-container">
+        <button 
+          className="language-switch" 
+          onClick={toggleLanguage}
+          aria-label="Toggle language"
+        >
+          <span className={`lang-option ${language === 'fr' ? 'active' : ''}`}>FR</span>
+          <span className={`lang-option ${language === 'en' ? 'active' : ''}`}>EN</span>
+        </button>
+      </div>
     </div>
   )
 }
 
 export default Clock
+
 
 
 

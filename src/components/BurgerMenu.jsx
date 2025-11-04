@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 import CircularText from './CircularText'
 import './BurgerMenu.css'
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useLanguage()
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
@@ -53,12 +55,12 @@ const BurgerMenu = () => {
           {/* Petit bouton de fermeture avec croix */}
           <button className="menu-close-small" onClick={handleClose}>×</button>
           <nav className="menu-nav">
-            <a href="#section1" onClick={handleClose}>Accueil</a>
-            <a href="#section2" onClick={handleClose}>Section 2</a>
-            <a href="#section3" onClick={handleClose}>Section 3</a>
-            <a href="#section4" onClick={handleClose}>Section 4</a>
-            <a href="#section5" onClick={handleClose}>Section 5</a>
-            <a href="#section6" onClick={handleClose}>Section 6</a>
+            <a href="#section1" onClick={handleClose}>{t('home')}</a>
+            <a href="#section2" onClick={handleClose}>{t('section2')}</a>
+            <a href="#section3" onClick={handleClose}>{t('section3')}</a>
+            <a href="#section4" onClick={handleClose}>{t('section4')}</a>
+            <a href="#section5" onClick={handleClose}>{t('section5')}</a>
+            <a href="#section6" onClick={handleClose}>{t('section6')}</a>
           </nav>
         </div>
       </div>

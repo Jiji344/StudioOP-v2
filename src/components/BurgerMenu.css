@@ -1,9 +1,8 @@
 /* Button Wrap Container */
 .button-wrap {
   position: fixed;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 30px;
+  right: 50px;
   z-index: 100;
   border-radius: 999vw;
   background: transparent;
@@ -309,7 +308,8 @@ button:active {
 /* Responsive Burger Menu */
 @media (max-width: 768px) {
   .button-wrap {
-    top: 40px;
+    top: 25px;
+    right: 30px;
   }
 
   .hamburger-svg {
@@ -343,11 +343,16 @@ button:active {
 
 @media (max-width: 480px) {
   .button-wrap {
-    top: 35px;
+    top: 20px;
+    right: 20px;
   }
 
   .hamburger-svg {
-    height: 1.5em;
+    height: 1.2em;
+  }
+
+  button {
+    padding: 0.6em;
   }
 
   .menu-card {
